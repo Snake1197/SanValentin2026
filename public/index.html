@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ec4899" />
+    <meta
+      name="description"
+      content="Camino a nuestra sorpresa de San Valentín 💕"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>💌 Camino a nuestra sorpresa</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="💌 Camino a nuestra sorpresa" />
+    <meta property="og:description" content="Cada paso nos acerca un poco más..." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="💌 Camino a nuestra sorpresa" />
+    
+    <style>
+      /* Loading inicial */
+      #root-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fff0f5;
+        font-family: 'Segoe UI', sans-serif;
+      }
+      
+      #root-loading .spinner {
+        font-size: 48px;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      #root-loading .text {
+        color: #be185d;
+        margin-top: 16px;
+        font-size: 16px;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Necesitas habilitar JavaScript para ver esta aplicación.</noscript>
+    <div id="root">
+      <!-- Loading mientras carga React -->
+      <div id="root-loading">
+        <div class="spinner">💕</div>
+        <p class="text">Cargando...</p>
+      </div>
+    </div>
+  </body>
+</html>

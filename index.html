@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ec4899" />
+    <meta name="description" content="Camino a nuestra sorpresa de San Valentín 💕" />
+    
+    <title>💌 Camino a nuestra sorpresa</title>
+    
+    <style>
+      /* Loading inicial mientras carga React */
+      #root-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fff0f5;
+        font-family: 'Segoe UI', sans-serif;
+      }
+      
+      #root-loading .spinner {
+        font-size: 48px;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      #root-loading .text {
+        color: #be185d;
+        margin-top: 16px;
+        font-size: 16px;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Necesitas habilitar JavaScript para ver esta aplicación.</noscript>
+    <div id="root">
+      <!-- Loading mientras carga React -->
+      <div id="root-loading">
+        <div class="spinner">💕</div>
+        <p class="text">Cargando...</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
